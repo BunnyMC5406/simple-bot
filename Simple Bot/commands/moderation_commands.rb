@@ -20,7 +20,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Error'
           e.description = 'Could not find that user. Please provide a valid user mention.'
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)
@@ -30,7 +30,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Bot Permission Error'
           e.description = 'I do not have permission to kick members.'
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)
@@ -40,7 +40,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Role Hierarchy Error'
           e.description = "I cannot kick users with a higher or equal role to mine."
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)
@@ -54,7 +54,7 @@ module ModerationCommands
           e.title = 'User Kicked'
           e.description = "**#{user.display_name}** has been kicked from the server."
           e.add_field(name: 'Reason', value: reason_str)
-          e.color = 0xFEE75C # Warning yellow
+          e.color = 0xFEE75C
           e.timestamp = Time.now
           e.footer = {text: "Kicked by #{event.user.display_name}"}
         end
@@ -79,7 +79,6 @@ module ModerationCommands
       end
     end
 
-    # !ban command
     bot.command(:ban, min_args: 1, max_args: Float::INFINITY) do |event, user_mention, *reason|
       unless event.user.permission?(:ban_members)
         embed = EmbedBuilder.build do |e|
@@ -98,7 +97,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Error'
           e.description = 'Could not find that user. Please provide a valid user mention.'
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)
@@ -108,7 +107,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Bot Permission Error'
           e.description = 'I do not have permission to ban members.'
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)
@@ -118,7 +117,7 @@ module ModerationCommands
         embed = EmbedBuilder.build do |e|
           e.title = 'Role Hierarchy Error'
           e.description = "I cannot ban users with a higher or equal role to mine."
-          e.color = 0xED4245 # Error red
+          e.color = 0xED4245
           e.timestamp = Time.now
         end
         return event.channel.send_embed('', embed)

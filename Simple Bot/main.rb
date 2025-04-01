@@ -1,5 +1,3 @@
-# main.rb - Main entry point for the Discord bot
-
 require 'discordrb'
 require 'dotenv'
 require_relative 'commands/basic_commands'

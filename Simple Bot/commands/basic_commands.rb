@@ -8,7 +8,7 @@ module BasicCommands
       embed = EmbedBuilder.build do |e|
         e.title = 'Hello!'
         e.description = "Hello there, #{username}! How are you doing today?"
-        e.color = 0x5865F2 # Discord blue
+        e.color = 0x5865F2
         e.timestamp = Time.now
       end
 
@@ -24,7 +24,7 @@ module BasicCommands
       embed = EmbedBuilder.build do |e|
         e.title = 'Pong!'
         e.description = "Latency: #{latency}ms\nAPI Latency: #{bot.latency}ms"
-        e.color = 0x57F287 # Success green
+        e.color = 0x57F287
         e.timestamp = Time.now
       end
 
@@ -35,7 +35,7 @@ module BasicCommands
       embed = EmbedBuilder.build do |e|
         e.title = 'Bot Commands'
         e.description = 'Here are the available commands:'
-        e.color = 0x5865F2 # Discord blue
+        e.color = 0x5865F2
         
         e.add_field(name: 'Basic Commands', value: <<~COMMANDS, inline: false)
           `!hello` - Greet the bot
