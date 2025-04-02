@@ -1,7 +1,4 @@
 module EmbedBuilder
-  # This will build a Discord embed with neat styling
-  # @param &block [Block] The block to build the embed
-  # @return [Discordrb::Webhooks::Embed] The built embed
   def self.build(&block)
     embed = Discordrb::Webhooks::Embed.new
 
