@@ -1,3 +1,8 @@
+# ------>
+#
+# BOT MADE BY: BUNNYMC5406
+#
+# ------>
 require 'discordrb'
 require 'dotenv'
 require_relative 'commands/basic_commands'
