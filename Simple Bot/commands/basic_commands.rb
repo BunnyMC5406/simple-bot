@@ -36,11 +36,18 @@ module BasicCommands
         e.title = 'Bot Commands'
         e.description = 'Here are the available commands:'
         e.color = 0x5865F2
+
+    bot.command(:info) do |event|
+      embed = EmbedBuilder.build do |e|
+        e.title = 'Info'
+        e.description = 'Our server description here.'
+        e.color = 0x4537F8
         
         e.add_field(name: 'Basic Commands', value: <<~COMMANDS, inline: false)
           `!hello` - Greet the bot
           `!ping` - Check bot's response time
           `!help` - Display this help message
+          `!info` - Get info about our server
         COMMANDS
         
         e.add_field(name: 'Server Information', value: <<~COMMANDS, inline: false)
