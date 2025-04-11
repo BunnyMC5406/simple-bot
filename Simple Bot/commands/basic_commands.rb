@@ -41,7 +41,7 @@ module BasicCommands
       embed = EmbedBuilder.build do |e|
         e.title = 'Info'
         e.description = 'Our server description here.'
-        e.color = 0x4537F8
+        e.color = 0xFEE75C
         
         e.add_field(name: 'Basic Commands', value: <<~COMMANDS, inline: false)
           `!hello` - Greet the bot
