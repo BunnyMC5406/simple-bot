@@ -5,7 +5,7 @@ A Discord bot developed in Ruby that enhances server management and member engag
 ## Features
 
 - Basic interaction commands (`!hello`, `!ping`) for community engagement
-- Server information command (`!serverinfo`) to display server statistics and details
+- Server information command (`!serverinfo` `!rules`) to display server statistics and details
 - Moderation capabilities (`!kick`, `!ban`) for server management
 - Role management commands (`!addrole`, `!removerole`) for user role assignments
 - Clear command responses with appropriate feedback messages
@@ -50,6 +50,7 @@ A Discord bot developed in Ruby that enhances server management and member engag
 
 ### Server Information
 - `!serverinfo` - Display detailed information about the server
+- `!rules` - Display Server rules for user interaction
 
 ### Moderation Commands
 - `!kick @user [reason]` - Kick a user from the server
