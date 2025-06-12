@@ -9,6 +9,7 @@ require_relative 'commands/basic_commands'
 require_relative 'commands/moderation_commands'
 require_relative 'commands/server_info_commands'
 require_relative 'commands/role_management_commands'
+require_relative 'comands/server_rules_commands'
 
 Dotenv.load
 
@@ -37,6 +38,7 @@ BasicCommands.include_commands(bot)
 ModerationCommands.include_commands(bot)
 ServerInfoCommands.include_commands(bot)
 RoleManagementCommands.include_commands(bot)
+ServerRulesCommands.include_commands(bot)
 
 bot.ready do |event|
   puts "Bot connected to Discord as #{bot.profile.username}##{bot.profile.discriminator}"
