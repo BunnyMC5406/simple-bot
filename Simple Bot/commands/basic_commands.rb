@@ -42,12 +42,19 @@ module BasicCommands
         e.title = 'Info'
         e.description = 'Our server description here.'
         e.color = 0xFEE75C
+
+    bot.command(:rules) do |event|
+        embed = EmbedBuilder.build do |e|
+          e.title = 'Rules'
+          e.description = 'Make rules for your Discord.'
+          e.color = 0xFEE75C
         
         e.add_field(name: 'Basic Commands', value: <<~COMMANDS, inline: false)
           `!hello` - Greet the bot
           `!ping` - Check bot's response time
           `!help` - Display this help message
           `!info` - Get info about our server
+          `!rules` - Rules for the Discord
         COMMANDS
         
         e.add_field(name: 'Server Information', value: <<~COMMANDS, inline: false)
