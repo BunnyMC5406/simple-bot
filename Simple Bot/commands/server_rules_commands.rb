@@ -7,14 +7,10 @@ module RulesCommands
       server = event.server
       
       embed = EmbedBuilder.build do |e|
-        e.title = server.name
-        e.description = server.description.nil? || server.description.empty? ? "No description" : server.description
+        e.title = 'Server Rules'
+        e.description = 'please follow our community rules'
         e.color = 0x5865F2
-        
-        e.thumbnail = { url: server.icon_url } if server.icon_url
-
-        e.addField(name: '**Server Rules**')
-
+        e.add_field(name: '')
         e.add_field(name: '1. No Spamming', value: 'No spamming in any chats.')
         e.add_field(name: '2. Be Respectful', value: 'Treat everyone with respect. No harassment or hate speech.')
         e.add_field(name: '3. No NSFW Content', value: 'Keep things appropriate. No adult or disturbing content.')
@@ -24,17 +20,9 @@ module RulesCommands
         e.add_field(name: '7. Follow Staff Instructions', value: 'Staff decisions are final. Follow their guidance.')
         e.add_field(name: '8. No Exploits or Hacks', value: 'Using exploits or hacking tools is forbidden.')
         e.add_field(name: '9. Keep Usernames Appropriate', value: 'Usernames and profile pictures must follow rules.')
-        e.add_field(name: '10. English Only', value: 'Please use English in public channels unless stated otherwise.')     
-        
-        if server.respond_to?(:premium_tier)
-          e.add_field(name: 'Boost Tier', value: server.premium_tier, inline: true)
-          e.add_field(name: 'Boosts', value: server.respond_to?(:premium_subscription_count) ? server.premium_subscription_count : 'Unknown', inline: true)
-        end
-        
+        e.add_field(name: '10. English Only', value: 'Please use English in public channels unless stated otherwise.')          
         e.timestamp = Time.now
-        e.footer = { text: "Requested by #{event.user.display_name}" }
-      end
-      
+      end      
       event.channel.send_embed('', embed)
     end
   end
