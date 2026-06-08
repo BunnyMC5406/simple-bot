@@ -1,6 +1,6 @@
 # Ruby Discord Bot
 
-A Discord bot developed in Ruby that enhances server management and member engagement through interactive commands and automated responses.
+A Discord bot developed in Ruby that makes server management and member engagement better.
 
 ## Features
 
